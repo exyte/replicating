@@ -16,7 +16,7 @@
 <hr>
 <h2>Apple's Activity Application</h2>
 <img align="right" src="https://github.com/exyte/replicating/blob/master/Assets/activity-app-cover.png" width="480">
-<p>Apple's Activity app features a number of quite complecated controls. We thought it would be fun to replecate one of them.</p>
+<p>Apple's Activity app features a number of quite complicated controls. We thought it would be fun to replicate one of them.</p>
 <p>
     <a href="https://exyte.com/blog/swiftui-tutorial-replicating-activity-application?utm_source=github&utm_medium=referral&utm_campaign=website_blog">Read Article »</a>
     <br>
