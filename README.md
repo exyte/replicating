@@ -1,5 +1,5 @@
 <img src="https://github.com/exyte/replicating/blob/master/Assets/header.png">
-<h1>Replicating complex UI using SwiftUI</h1>
+<h1>Replicating complex UI using SwiftUI & Compose</h1>
 <p>Apple has just released SwiftUI, and we decided to get to know it through making a series of tutorials on creating complex UIs with SwiftUI.</p>
 <h2>Apple Card Application</h2>
 <img align="right" src="https://github.com/exyte/replicating/blob/master/Assets/apple-card-cover.png" width="480">
@@ -21,4 +21,19 @@
     <a href="https://exyte.com/blog/swiftui-tutorial-replicating-activity-application?utm_source=github&utm_medium=referral&utm_campaign=website_blog">Read Article »</a>
     <br>
     <a href="https://github.com/exyte/replicating/tree/master/Activity%20App">View Source Code »</a>
-</p>  
+</p> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h2>Music App</h2>
+<img align="right" src="https://user-images.githubusercontent.com/57913130/203747962-39eb1b2c-a678-4dce-bc4d-f3dcecce3d8f.png" width="480">
+<p>Using Jetpack Compose to implement a beautifully animated app with custom UI components.</p>
+<p>
+    <a href="https://github.com/exyte/replicating/tree/master/Music%20App">View Source Code »</a>
+</p> 
+
