@@ -27,34 +27,18 @@ import com.exyte.composesample.ui.theme.PlayerTheme
 value class Section(val title: String)
 
 @Composable
-fun SectionSelector(modifier: Modifier = Modifier, onSelect: (Section) -> Unit = {}) {
-    val sectionTitles = remember {
-        listOf(
-            Section("Comments"),
-            Section("Popular"),
-        )
-    }
-    var currentSelection by remember { mutableStateOf(sectionTitles.last()) }
-
-    SectionSelector(
-        modifier = modifier,
-        sections = sectionTitles,
-        selection = currentSelection,
-        onClick = { selection ->
-            if (selection != currentSelection) {
-                currentSelection = selection
-                onSelect(selection)
-            }
-        })
-}
-
-@Composable
 fun SectionSelector(
     modifier: Modifier = Modifier,
-    sections: Collection<Section>,
-    selection: Section,
     onClick: (Section) -> Unit = {},
 ) {
+
+    val sections = listOf(
+        Section("Comments"),
+        Section("Popular")
+    )
+
+    var currentSelection by remember { mutableStateOf(sections.last()) }
+
     Surface(
         modifier = modifier,
         shape = RoundedCornerShape(50),
@@ -62,12 +46,17 @@ fun SectionSelector(
     ) {
         Row {
             sections.forEach { item ->
-                val isSelected = item == selection
+                val isSelected = item == currentSelection
                 SectionItem(
                     modifier = Modifier
                         .weight(1f)
                         .fillMaxHeight()
-                        .clickable { onClick(item) },
+                        .clickable {
+                            if (item != currentSelection) {
+                                currentSelection = item
+                                onClick(item)
+                            }
+                        },
                     title = item.title,
                     isSelected = isSelected,
                 )

@@ -48,7 +48,7 @@ class CollapsingHeaderState(topInset: Dp) {
     fun findHeaderElevation(isSharedProgressRunning: Boolean): Dp =
         if (isSharedProgressRunning) 0.dp else headerElevation
 
-    companion object{
+    companion object {
         val MAX_HEADER_COLLAPSE = 120.dp
         val MAX_HEADER_HEIGHT = 450.dp
     }
@@ -56,7 +56,10 @@ class CollapsingHeaderState(topInset: Dp) {
 
 @Composable
 @Stable
-fun rememberCollapsingHeaderState(key: Any = Unit, topInset: Dp) = remember(key1 = key) {
+fun rememberCollapsingHeaderState(
+    key: Any,
+    topInset: Dp
+) = remember(key1 = key) {
     CollapsingHeaderState(topInset = topInset)
 }
 
@@ -130,7 +133,7 @@ fun NowPlayingAlbumScreen(
     }
 
     val headerState =
-    rememberCollapsingHeaderState(key = insets.topInset, topInset = insets.topInset)
+        rememberCollapsingHeaderState(key = insets.topInset, topInset = insets.topInset)
     val scrollState = rememberLazyListState()
 
     val bottomControlsHeight by remember(insets) {

@@ -40,7 +40,7 @@ fun rememberPlayerScreenState(
         isInPreviewMode
     )
 }
-
+@Stable
 class PlayerScreenState(
     constraints: Constraints,
     private val density: Density,

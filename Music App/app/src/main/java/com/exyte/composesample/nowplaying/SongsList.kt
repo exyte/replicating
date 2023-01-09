@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.exyte.composesample.*
 import com.exyte.composesample.ui.theme.PlayerTheme
+import kotlinx.collections.immutable.ImmutableList
 
 /*
  * Created by Exyte on 14.10.2021.
@@ -105,7 +106,7 @@ fun SongListItem(
 @Composable
 fun SongList(
     modifier: Modifier = Modifier,
-    items: List<ModelSongInfo>,
+    items: ImmutableList<ModelSongInfo>,
     bottomPadding: Dp = 0.dp,
     scrollState: LazyListState = rememberLazyListState(),
     offsetPercent: State<Float>,

@@ -29,7 +29,7 @@ import kotlin.math.abs
  */
 
 @Composable
-fun PlayerScreen(playbackData: PlaybackData = PlaybackData()) {
+fun PlayerScreen(playbackData: PlaybackData) {
      val systemUiController : SystemUiController = rememberSystemUiController()
     SideEffect {
         systemUiController.isStatusBarVisible = false
@@ -151,7 +151,7 @@ fun PlayerScreen(playbackData: PlaybackData = PlaybackData()) {
 private fun PreviewMainScreen() {
     PlayerTheme(darkTheme = false) {
         CompositionLocalProvider(LocalInspectionMode provides true) {
-            PlayerScreen()
+            PlayerScreen(PlaybackData())
         }
     }
 }

@@ -25,6 +25,7 @@ import com.exyte.composesample.*
 import com.exyte.composesample.R
 import com.exyte.composesample.ui.TopMenu
 import com.exyte.composesample.ui.theme.PlayerTheme
+import kotlinx.collections.immutable.ImmutableList
 
 /*
  * Created by Exyte on 11.10.2021.
@@ -33,7 +34,7 @@ import com.exyte.composesample.ui.theme.PlayerTheme
 fun AlbumsListContainer(
     modifier: Modifier = Modifier,
     listScrollState: ScrollState = rememberScrollState(),
-    albumData: Collection<ModelAlbumInfo>,
+    albumData: ImmutableList<ModelAlbumInfo>,
     albumImageWidth: Dp = 150.dp,
     transitionAnimationProgress: Float = 0f,
     appearingAnimationProgress: Float = 1f,

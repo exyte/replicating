@@ -79,6 +79,7 @@ value class DpInsets private constructor(private val dpSize: DpSize) {
         @Stable
         fun from(topInset: Dp, bottomInset: Dp) = DpInsets(DpSize(topInset, bottomInset))
 
+        @Stable
         val Zero: DpInsets get() = DpInsets(DpSize.Zero)
     }
 }

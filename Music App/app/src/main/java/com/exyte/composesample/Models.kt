@@ -5,6 +5,8 @@ import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
 
 /*
  * Created by Exyte on 17.10.2021.
@@ -16,7 +18,7 @@ data class ModelAlbumInfo(
     val title: String,
     val author: String,
     val year: Int,
-    val songs: List<ModelSongInfo>,
+    val songs: ImmutableList<ModelSongInfo>,
 )
 
 @Stable
@@ -37,7 +39,7 @@ data class ModelSongInfo(
     val duration: String,
 )
 
-private fun songs() = listOf(
+private val songs = persistentListOf(
     ModelSongInfo(0L, "Aurora", "All Is Soft Inside", "3:54"),
     ModelSongInfo(1L, "Aurora", "Queendom", "5:47"),
     ModelSongInfo(2L, "Aurora", "Gentle Earthquakes", "4:32"),
@@ -59,12 +61,12 @@ private fun songs() = listOf(
 @Stable
 @Immutable
 data class PlaybackData(
-    val albums: Collection<ModelAlbumInfo> = listOf(
-        ModelAlbumInfo(R.drawable.img_album_01, "It happened Quiet", "Aurora", 2018, songs()),
-        ModelAlbumInfo(R.drawable.img_album_02, "All My Daemons", "Aurora", 2016, songs()),
-        ModelAlbumInfo(R.drawable.img_album_03, "Running", "Aurora", 2015, songs()),
+    val albums: ImmutableList<ModelAlbumInfo> = persistentListOf(
+        ModelAlbumInfo(R.drawable.img_album_01, "It happened Quiet", "Aurora", 2018, songs),
+        ModelAlbumInfo(R.drawable.img_album_02, "All My Daemons", "Aurora", 2016, songs),
+        ModelAlbumInfo(R.drawable.img_album_03, "Running", "Aurora", 2015, songs),
     ),
-    val comments: Collection<ModelComment> = listOf(
+    val comments: ImmutableList<ModelComment> =  persistentListOf(
         ModelComment(
             avatarId = R.drawable.img_face_01,
             name = "Wayne Valentine",
@@ -113,7 +115,7 @@ data class SharedElementData(
     val size: Dp,
 ) {
     companion object {
-        val NONE = SharedElementData(ModelAlbumInfo(0, "", "", 0, listOf()), 0.dp, 0.dp, 0.dp)
+        val NONE = SharedElementData(ModelAlbumInfo(0, "", "", 0, persistentListOf()), 0.dp, 0.dp, 0.dp)
     }
 }
 

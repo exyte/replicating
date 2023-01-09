@@ -145,7 +145,7 @@ fun PlayPauseButton(
 fun AnimatedVolumeLevelBar(
     modifier: Modifier = Modifier,
     barWidth: Dp = 2.dp,
-    gapWidth: Dp = barWidth,
+    gapWidth: Dp = 2.dp,
     barColor: Color = MaterialTheme.colors.onPrimary,
     isAnimating: Boolean = false,
 ) {

@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.exyte.composesample.*
 import com.exyte.composesample.ui.theme.PlayerTheme
+import kotlinx.collections.immutable.ImmutableList
 
 /*
  * Created by Exyte on 11.10.2021.
@@ -32,7 +33,7 @@ private val sectionSelectorHeight = 50.dp
 fun CommentsList(
     modifier: Modifier = Modifier,
     scrollState: ScrollState = rememberScrollState(),
-    comments: Collection<ModelComment>,
+    comments: ImmutableList<ModelComment>,
     onActionClick: (Action) -> Unit = {},
     topPadding: Dp = 0.dp
 ) {
