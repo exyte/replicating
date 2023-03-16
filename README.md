@@ -34,6 +34,8 @@
 <img align="right" src="https://user-images.githubusercontent.com/57913130/203747962-39eb1b2c-a678-4dce-bc4d-f3dcecce3d8f.png" width="480">
 <p>Using Jetpack Compose to implement a beautifully animated app with custom UI components.</p>
 <p>
+    <a href="https://exyte.com/blog/android-dribbble-replicating-part-1">Read Article »</a>
+    <br>
     <a href="https://github.com/exyte/replicating/tree/master/Music%20App">View Source Code »</a>
 </p> 
 
